@@ -1,5 +1,5 @@
 # Live DEMO via netlify:
-https://vigilant-ritchie-76beba.netlify.app/ 
+[netlify link](https://vigilant-ritchie-76beba.netlify.app/). 
 
 # Getting Started with Create React App
 
