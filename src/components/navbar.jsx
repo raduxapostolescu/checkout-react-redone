@@ -71,8 +71,8 @@ class NavBar extends Component {
       return c.value;
     });
     let countersValueTotal = countersValue.reduce((a, b) => a + b, 0);
-    countersValueTotal != 0
-      ? (pillClasses = pillClasses)
+    countersValueTotal !== 0
+      ? (pillClasses = "badge rounded-pill bg-primary mx-2")
       : (pillClasses = pillClasses + " d-none");
 
     return pillClasses;

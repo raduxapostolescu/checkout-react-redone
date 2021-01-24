@@ -30,7 +30,8 @@ class ActionButton extends Component {
     });
     let countersValueTotal = countersValue.reduce((a, b) => a + b, 0);
 
-    return this.props.button.buttonType === "success" && countersValueTotal == 0
+    return this.props.button.buttonType === "success" &&
+      countersValueTotal === 0
       ? true
       : false;
   }
