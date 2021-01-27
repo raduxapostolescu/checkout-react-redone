@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import Counter from "./counter";
+import "../styles/counters.css";
 
 class Counters extends Component {
   render() {
     return (
-      <div>
+      <div className="counters-container">
         <button onClick={this.props.onReset} className="btn btn-warning my-2">
           Reset
         </button>

@@ -1,46 +1,49 @@
 import React, { Component } from "react";
-import { FaShoppingBasket } from "react-icons/fa";
+import * as FaIcons from "react-icons/fa";
 import { IconContext } from "react-icons";
+import "../styles/navbar.css";
 
 class NavBar extends Component {
   render() {
     return (
-      <nav className="navbar navbar-light bg-dark rounded-bottom shadow-lg">
-        <div className="d-flex w-25 justify-content-start">
-          <IconContext.Provider value={{ color: "#ffeeea", size: "1.5em" }}>
-            <div className="m-2">
-              <FaShoppingBasket />
-            </div>
-          </IconContext.Provider>
-          <a
-            className="navbar-brand"
-            href="/"
-            style={{
-              color: "#ffeeea",
-              fontFamily: "sans-serif",
-              fontWeight: "100",
-              fontSize: "1.5em",
-            }}
-          >
-            Checkout
-          </a>
-        </div>
-        <div className="float-left">
-          <span
-            className={this.getPillTotalClasses()}
-            style={{ color: "#fff", padding: "1em" }}
-          >
-            Total Items:
-            {this.getTotalItems()}
-          </span>
-          <span
-            className={this.getPillTotalClasses()}
-            style={{ color: "#fff", padding: "1em" }}
-          >
-            Order Total: ${this.getTotalPrice()}
-          </span>
-        </div>
-      </nav>
+      <React.Fragment>
+        <nav className="navbar navbar-light navbar-top bg-dark rounded-bottom shadow-lg">
+          <div className="w-25 justify-content-start d-none d-md-flex">
+            <IconContext.Provider value={{ color: "#ffeeea", size: "1.5em" }}>
+              <div className="m-2">
+                <FaIcons.FaAlignJustify />
+              </div>
+            </IconContext.Provider>
+            <a
+              className="navbar-brand"
+              href="/"
+              style={{
+                color: "#ffeeea",
+                fontFamily: "sans-serif",
+                fontWeight: "100",
+                fontSize: "1.5em",
+              }}
+            >
+              Checkout
+            </a>
+          </div>
+          <div className="navbar-pills">
+            <span
+              className={this.getPillTotalClasses()}
+              style={{ color: "#fff", padding: "1em" }}
+            >
+              Total Items:
+              {this.getTotalItems()}
+            </span>
+            <span
+              className={this.getPillTotalClasses()}
+              style={{ color: "#fff", padding: "1em" }}
+            >
+              Order Total: ${this.getTotalPrice()}
+            </span>
+          </div>
+        </nav>
+      </React.Fragment>
     );
   }
 

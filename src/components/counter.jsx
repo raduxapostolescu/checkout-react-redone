@@ -16,14 +16,14 @@ class Counter extends Component {
             className={buttonClasses}
             disabled={this.props.counter.value <= 0 ? 1 : 0}
           >
-            Decrement
+            -
           </button>
           <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
           <button
             onClick={() => this.props.onIncrement(this.props.counter)}
             className={buttonClasses}
           >
-            Increment
+            +
           </button>
           <button
             onClick={() => this.props.onDeletion(this.props.counter.id)}
@@ -42,7 +42,7 @@ class Counter extends Component {
         >
           {this.props.counter.name}
         </h4>
-        <div className="my-3 mx-2">
+        <div className="my-3 mx-2 d-none d-md-block">
           <IconContext.Provider value={{ color: "#10559e", size: "1.5em" }}>
             {isIconDrink ? <BiDrink /> : <GiOpenedFoodCan />}
           </IconContext.Provider>
