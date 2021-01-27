@@ -41,7 +41,7 @@ class NavBar extends Component {
           <nav className="nav-menu" id="sidebar-root">
             <ul className="nav-menu-items">
               <li className="nav-bar-toggle">
-                <a to="#top" className="menu-bars">
+                <a href="#top" className="menu-bars">
                   <AiIcons.AiOutlineClose
                     style={{ cursor: "pointer", height: "2rem" }}
                     onClick={() => {
