@@ -41,7 +41,7 @@ class NavBar extends Component {
           <nav className="nav-menu" id="sidebar-root">
             <ul className="nav-menu-items">
               <li className="nav-bar-toggle">
-                <a to="#" className="menu-bars">
+                <a to="#top" className="menu-bars">
                   <AiIcons.AiOutlineClose
                     style={{ cursor: "pointer", height: "2rem" }}
                     onClick={() => {
@@ -55,7 +55,7 @@ class NavBar extends Component {
               {this.props.sidebar.map((item, index) => {
                 return (
                   <li key={index} className="nav-text">
-                    <a href="#">
+                    <a href="#top">
                       {item.icon}
                       <span className="mx-2">{item.text}</span>
                     </a>
