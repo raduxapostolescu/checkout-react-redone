@@ -40,7 +40,7 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <NavBar counters={this.state.counters} />
+        <NavBar counters={this.state.counters} sidebar={this.state.sidebar} />
         <main className="container">
           <div className="row">
             <Counters
