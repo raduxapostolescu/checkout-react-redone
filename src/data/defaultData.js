@@ -32,10 +32,20 @@ export const defaultData = {
     },
   ],
   sidebar: [
-    { id: 1, text: "Home", icon: <AiIcons.AiFillHome /> },
-    { id: 1, text: "Food Menu", icon: <BiIcons.BiFoodMenu /> },
-    { id: 1, text: "Drinks Menu", icon: <BiIcons.BiDrink /> },
-    { id: 1, text: "Nutrition", icon: <IoIcons.IoMdBody /> },
-    { id: 1, text: "Contact", icon: <IoIcons.IoMdContacts /> },
+    { id: 1, text: "Home", icon: <AiIcons.AiFillHome />, link: "#home" },
+    { id: 1, text: "Food Menu", icon: <BiIcons.BiFoodMenu />, link: "#food" },
+    { id: 1, text: "Drinks Menu", icon: <BiIcons.BiDrink />, link: "#drinks" },
+    {
+      id: 1,
+      text: "Nutrition",
+      icon: <IoIcons.IoMdBody />,
+      link: "#nutrition",
+    },
+    {
+      id: 1,
+      text: "Contact",
+      icon: <IoIcons.IoMdContacts />,
+      link: "#contact",
+    },
   ],
 };

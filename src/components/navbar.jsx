@@ -55,7 +55,7 @@ class NavBar extends Component {
               {this.props.sidebar.map((item, index) => {
                 return (
                   <li key={index} className="nav-text">
-                    <a href="#top">
+                    <a href={item.link}>
                       {item.icon}
                       <span className="mx-2">{item.text}</span>
                     </a>
