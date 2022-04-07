@@ -2,15 +2,22 @@ import React, { Component } from "react";
 import { BiDrink } from "react-icons/bi";
 import { GiOpenedFoodCan } from "react-icons/gi";
 import { IconContext } from "react-icons";
+import "../styles/counter.css"
 
-const buttonClasses = "btn btn-secondary btn-sm";
+const buttonClasses = "btn btn-secondary btn-md";
 
 class Counter extends Component {
   render() {
     const isIconDrink = this.props.counter.type === "drink";
     return (
       <div className="d-flex">
-        <div className="my-2 me-2 d-flex justify-content-around">
+        <div className="my-2 me-2 mr-2 d-flex justify-content-around">
+          <button
+            onClick={() => this.props.onDeletion(this.props.counter.id)}
+            className="deleteButton btn btn-danger btn-sm mr-2"
+          >
+            Delete
+          </button>
           <button
             onClick={() => this.props.onDecrement(this.props.counter)}
             className={buttonClasses}
@@ -24,12 +31,6 @@ class Counter extends Component {
             className={buttonClasses}
           >
             +
-          </button>
-          <button
-            onClick={() => this.props.onDeletion(this.props.counter.id)}
-            className="btn btn-danger btn-sm mx-2"
-          >
-            Delete
           </button>
         </div>
         <h4
@@ -52,7 +53,7 @@ class Counter extends Component {
   }
 
   getBadgeClasses() {
-    let classes = "badge mx-3 p-3 badge-";
+    let classes = "badge mx-2 p-3 badge-";
     classes += this.props.counter.value === 0 ? "warning" : "primary";
     return classes;
   }

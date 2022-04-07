@@ -2,3 +2,7 @@
   margin-top: 4rem;
   margin-left: 2rem;
 }
+
+.resetButton {
+  min-width: 4rem;
+}
